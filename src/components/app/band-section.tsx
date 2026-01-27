@@ -134,16 +134,16 @@ export function BandSection() {
                             <Info className="h-3.5 w-3.5" />
                           </button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-xl">
+                        <DialogContent className="max-w-xl bg-black text-[#f5eee3] border border-[#d6b25a]">
                           <DialogHeader>
                             <DialogTitle>{member.name}</DialogTitle>
                           </DialogHeader>
-                          <div className="space-y-3 text-sm text-muted-foreground">
-                            <p className="font-medium text-foreground">{member.instrument}</p>
+                          <div className="space-y-3 text-sm text-[#f5eee3]/90">
+                            <p className="font-medium text-[#f5eee3]">{member.instrument}</p>
                             <p style={{ textAlign: 'justify' }}>{member.bio}</p>
                             {member.links?.length ? (
                               <div className="space-y-2">
-                                <p className="font-medium text-foreground">Más información</p>
+                                <p className="font-medium text-[#f5eee3]">Más información</p>
                                 <ul className="space-y-1">
                                   {member.links.map((link) => (
                                     <li key={link.url}>
@@ -151,7 +151,7 @@ export function BandSection() {
                                         href={link.url}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="text-primary hover:underline"
+                                        className="text-[#d6b25a] hover:underline"
                                       >
                                         {link.label}
                                       </a>
