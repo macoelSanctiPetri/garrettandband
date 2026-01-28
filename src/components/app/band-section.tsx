@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 import { Info } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -91,7 +92,37 @@ const members = [
   },
 ];
 
+const collaborators = [
+  {
+    name: 'Gema Gallardo',
+    instrument: 'Viola',
+    imageUrl: withBasePath('/fotos/colaboradores/Gema_Gallardo.png'),
+  },
+  {
+    name: 'Guillermo Cordero',
+    instrument: 'Violín',
+    imageUrl: withBasePath('/fotos/colaboradores/Guillermo_Cordero.png'),
+  },
+];
+
+const guests = [
+  {
+    name: 'Jane Keith',
+    instrument: 'Saxofón',
+    imageUrl: withBasePath('/fotos/invitados/Jane_Keith.png'),
+  },
+  {
+    name: 'Mirko Vignali',
+    instrument: 'Guitarra',
+    imageUrl: withBasePath('/fotos/invitados/Mirko_Vignali.png'),
+  },
+];
+
 export function BandSection() {
+  const [activeGroup, setActiveGroup] = useState<'colaboradores' | 'invitados' | null>(null);
+  const visibleMembers =
+    activeGroup === 'colaboradores' ? collaborators : activeGroup === 'invitados' ? guests : [];
+
   return (
     <section
       id="la-banda"
@@ -170,6 +201,73 @@ export function BandSection() {
               </Card>
             );
           })}
+        </div>
+
+        <div className="mt-12 md:mt-16 border-t border-[#d6b25a]/40 pt-10">
+          <div className="text-center space-y-3">
+            <h3 className="text-2xl md:text-3xl font-semibold text-[#f5eee3]">
+              Colaboradores e invitados
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              <button
+                type="button"
+                onClick={() =>
+                  setActiveGroup((current) => (current === 'colaboradores' ? null : 'colaboradores'))
+                }
+                className={`px-4 py-2 rounded-full border text-sm font-semibold transition-colors ${
+                  activeGroup === 'colaboradores'
+                    ? 'bg-[#d6b25a] text-[#2b1c12] border-[#d6b25a]'
+                    : 'text-[#f5eee3] border-[#d6b25a]/60 hover:bg-[#d6b25a]/10'
+                }`}
+                aria-pressed={activeGroup === 'colaboradores'}
+              >
+                Músicos colaboradores
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  setActiveGroup((current) => (current === 'invitados' ? null : 'invitados'))
+                }
+                className={`px-4 py-2 rounded-full border text-sm font-semibold transition-colors ${
+                  activeGroup === 'invitados'
+                    ? 'bg-[#d6b25a] text-[#2b1c12] border-[#d6b25a]'
+                    : 'text-[#f5eee3] border-[#d6b25a]/60 hover:bg-[#d6b25a]/10'
+                }`}
+                aria-pressed={activeGroup === 'invitados'}
+              >
+                Músicos invitados
+              </button>
+            </div>
+          </div>
+
+          {visibleMembers.length ? (
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center">
+              {visibleMembers.map((member) => (
+                <Card
+                  key={member.name}
+                  className="border-none shadow-lg rounded-none bg-[#f7f1e6] overflow-hidden w-full max-w-sm"
+                >
+                  <CardContent className="p-0 text-center">
+                    <div className="aspect-square relative">
+                      <Image
+                        src={member.imageUrl}
+                        alt={`Retrato de ${member.name}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-4 bg-[#d6b25a]">
+                      <h4 className="font-semibold text-lg text-[#2b1c12]">{member.name}</h4>
+                      <p className="text-sm text-[#4a3522] font-light italic">
+                        {member.instrument}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
