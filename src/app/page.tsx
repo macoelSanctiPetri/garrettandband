@@ -8,9 +8,32 @@ import { ContactSection } from "@/components/app/contact-section";
 import { Footer } from "@/components/app/footer";
 
 export default function Home() {
+  const announcement = {
+    enabled: true,
+    text: 'Sabado 25 de abril de 2026 - El Cuartel del Mar - Chiclana de la Frontera.',
+    cta: {
+      label: 'Ver proximo concierto',
+      href: '#eventos',
+    },
+  };
   return (
     <div className="flex flex-col min-h-dvh bg-background">
       <Header />
+      {announcement.enabled ? (
+        <div className="bg-[#0a0a0a] px-4 py-2 sm:px-6 sm:py-3 shadow-lg">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 text-left sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs sm:text-base font-medium text-amber-300">
+              {announcement.text}
+            </p>
+            <a
+              href={announcement.cta.href}
+              className="inline-flex items-center justify-center rounded-none bg-primary px-3 py-2 text-[10px] sm:px-4 sm:py-2 sm:text-xs font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90"
+            >
+              {announcement.cta.label}
+            </a>
+          </div>
+        </div>
+      ) : null}
       <main>
         <HeroSection />
         <section className="py-10 md:py-16 bg-background">

@@ -6,14 +6,6 @@ import { IconBrandSpotify, IconBrandYoutube } from '@tabler/icons-react';
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
-  const announcement = {
-    enabled: true,
-    text: 'Sábado 25 de abril de 2026 · El Cuartel del Mar · Chiclana de la Frontera.',
-    cta: {
-      label: 'Entrada libre',
-      href: '#eventos',
-    },
-  };
   const singlePromo = {
     enabled: true,
     title: 'The Arrow & The Bow',
@@ -89,23 +81,6 @@ export function HeroSection() {
           </div>
         )}
       </div>
-      {announcement.enabled && (
-        <div className="absolute inset-x-0 bottom-0 z-20">
-          <div className="bg-[#0a0a0a] px-6 py-4 shadow-lg">
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 text-left sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm sm:text-base font-medium text-amber-300">
-                {announcement.text}
-              </p>
-              <a
-                href={announcement.cta.href}
-                className="inline-flex items-center justify-center rounded-none bg-primary px-4 py-2 text-xs font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90"
-              >
-                {announcement.cta.label}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

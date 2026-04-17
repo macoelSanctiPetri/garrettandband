@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -12,6 +11,7 @@ type EventItem = {
   city: string;
   poster?: string;
   mapUrl?: string;
+  note?: string;
   ticket?: {
     label: string;
     href?: string;
@@ -24,7 +24,17 @@ const upcomingEvents: EventItem[] = [
     date: 'Sáb 25 de abril de 2026',
     venue: 'El Cuartel del Mar',
     city: 'Chiclana de la Frontera',
-    ticket: { label: 'Entrada libre', disabled: true },
+    poster: '/eventos/el-cuartel-del-mar-2026-04-25/cartel_el_cuartel_del_mar_2026_04_25.jpg',
+    mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
+    ticket: { label: 'Próximamente', disabled: true },
+  },
+  {
+    date: 'Vie 22 de mayo de 2026 · 21:00',
+    venue: 'Sala La Quemá',
+    city: 'Jerez de la Frontera',
+    poster: '/eventos/sala-la-quema-2026-05-22/cartel_sala_la_quema_2026_05_22_temporal.jpeg',
+    mapUrl: 'https://maps.app.goo.gl/9b9ETLHayTi57Ctk6',
+    ticket: { label: 'Próximamente', disabled: true },
   },
   {
     date: 'Vie 3 de julio de 2026',
@@ -32,6 +42,13 @@ const upcomingEvents: EventItem[] = [
     city: 'La Barrosa, Chiclana',
     mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
     ticket: { label: 'Entrada libre', disabled: true },
+  },
+  {
+    date: 'Julio o agosto de 2026',
+    venue: 'Asociacion Aires de Cadiz',
+    city: 'Cadiz',
+    mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
+    ticket: { label: 'Próximamente', disabled: true },
   },
   {
     date: 'Sáb 5 de septiembre de 2026',
@@ -43,6 +60,22 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Dom 12 de abril de 2026',
+    venue: 'Club de Suboficiales',
+    city: 'San Fernando',
+    poster: '/eventos/club-de-suboficiales-2026-04-12/cartel_club_suboficiales_2026_04_12.jpg',
+    note: 'Evento dirigido a socios del Club de Suboficiales. Si no eres socio y quieres asistir, contacta con nosotros a través del formulario.',
+    mapUrl: 'https://maps.app.goo.gl/yXbsxJjbxt2mtM169',
+    ticket: { label: 'Contacta con nosotros', href: '#contact' },
+  },
+  {
+    date: 'Mié 11 de marzo de 2026 · 12:00',
+    venue: 'Colegio Servando Camuñez',
+    city: 'San Fernando · Concierto didáctico para el alumnado',
+    poster: '/eventos/colegio-servando-camunez-2026-03-11/foto_colegio_servando_camunez_2026_03_11.jpg',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=CEIP+Servando+Camu%C3%B1ez+San+Fernando',
+  },
   {
     date: 'Sáb 8 de noviembre de 2025 · 21:30',
     venue: "Saint Patrick's Tavern",
@@ -110,28 +143,16 @@ export function EventsSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {upcomingEvents.map((event) => {
                 const poster = event.poster ?? defaultPoster;
-                const isPlaceholder = !event.poster;
                 return (
                 <Card key={event.date} className="flex flex-col rounded-none border border-[#d6b25a]/30 bg-[#0b0b0c] text-white shadow-md">
-                  {isPlaceholder ? (
-                    <div className="w-full overflow-hidden bg-black/20">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={withBasePath(poster)}
-                        alt={`Cartel de ${event.venue}`}
-                        className="block w-full h-auto object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-black/20">
-                      <Image
-                        src={withBasePath(poster)}
-                        alt={`Cartel de ${event.venue}`}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  )}
+                  <div className="w-full overflow-hidden bg-black/20">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={withBasePath(poster)}
+                      alt={`Cartel de ${event.venue}`}
+                      className="block w-full h-auto object-contain"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="font-bold text-xl text-[#d6b25a]">{event.venue}</CardTitle>
                   </CardHeader>
@@ -156,6 +177,9 @@ export function EventsSection() {
                         )}
                         <p>{event.city}</p>
                     </div>
+                    {event.note ? (
+                      <p className="mt-3 text-sm text-white/70">{event.note}</p>
+                    ) : null}
                   </CardContent>
                   <CardFooter>
                     {event.ticket?.href ? (

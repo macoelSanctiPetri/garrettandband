@@ -25,8 +25,13 @@ const MULTIMEDIA_LINKS = [
 export function Header() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [isMultimediaOpen, setIsMultimediaOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const observer = useRef<IntersectionObserver | null>(null);
   const multimediaCloseTimer = useRef<number | null>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     observer.current = new IntersectionObserver(
@@ -146,41 +151,53 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-foreground text-white border-l-stone-700">
-                <nav className="flex flex-col items-center justify-center h-full gap-8">
-                  {navItems}
-                  <Accordion type="single" collapsible className="w-full max-w-xs">
-                    <AccordionItem value="multimedia" className="border-stone-700">
-                      <AccordionTrigger className="text-white uppercase tracking-wider text-sm">
-                        Multimedia
-                      </AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex flex-col items-center gap-4">
-                          {MULTIMEDIA_LINKS.map((link) => (
-                            <a
-                              key={link.href}
-                              href={link.href}
-                              className="text-sm font-semibold uppercase tracking-wider text-white/90 hover:text-primary"
-                            >
-                              {link.label}
-                            </a>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                  <div className="flex gap-4 pt-8">
-                    <SocialLinks />
-                  </div>
-                </nav>
-            </SheetContent>
-          </Sheet>
+          {isMounted ? (
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white">
+                  <Menu />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-foreground text-white border-l-stone-700">
+                  <nav className="flex flex-col items-center justify-center h-full gap-8">
+                    {navItems}
+                    <Accordion type="single" collapsible className="w-full max-w-xs">
+                      <AccordionItem value="multimedia" className="border-stone-700">
+                        <AccordionTrigger className="text-white uppercase tracking-wider text-sm">
+                          Multimedia
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div className="flex flex-col items-center gap-4">
+                            {MULTIMEDIA_LINKS.map((link) => (
+                              <a
+                                key={link.href}
+                                href={link.href}
+                                className="text-sm font-semibold uppercase tracking-wider text-white/90 hover:text-primary"
+                              >
+                                {link.label}
+                              </a>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                    <div className="flex gap-4 pt-8">
+                      <SocialLinks />
+                    </div>
+                  </nav>
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white"
+              aria-label="Abrir menú"
+              disabled
+            >
+              <Menu />
+            </Button>
+          )}
         </div>
       </div>
     </header>
