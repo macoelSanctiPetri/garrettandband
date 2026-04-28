@@ -49,7 +49,7 @@ const upcomingEvents: EventItem[] = [
     ticket: { label: 'Entrada libre', disabled: true },
   },
   {
-    date: 'Julio o agosto de 2026',
+    date: 'Jue 6 de agosto de 2026',
     venue: 'Asociacion Aires de Cadiz',
     city: 'Cadiz',
     mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
