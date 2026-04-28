@@ -10,14 +10,14 @@ import { Footer } from "@/components/app/footer";
 export default function Home() {
   const announcement = {
     enabled: true,
-    text: 'Sabado 25 de abril de 2026 - El Cuartel del Mar - Chiclana de la Frontera.',
+    text: 'Sáb 16 de mayo de 2026 - El Cuartel del Mar - Chiclana de la Frontera.',
     cta: {
-      label: 'Ver proximo concierto',
+      label: 'Ver próximo concierto',
       href: '#eventos',
     },
   };
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div id="top" className="flex flex-col min-h-dvh bg-background">
       <Header />
       {announcement.enabled ? (
         <div className="bg-[#0a0a0a] px-4 py-2 sm:px-6 sm:py-3 shadow-lg">
@@ -53,3 +53,4 @@ export default function Home() {
     </div>
   );
 }
+

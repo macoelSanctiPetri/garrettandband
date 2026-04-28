@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 const NAV_LINKS = [
-  { href: '#inicio', label: 'Inicio' },
+  { href: '#top', label: 'Inicio' },
   { href: '#la-banda', label: 'La Banda' },
   { href: '#eventos', label: 'Eventos' },
   { href: '#canciones', label: 'Canciones' },
@@ -53,20 +53,25 @@ export function Header() {
     };
   }, []);
 
-  const navItems = NAV_LINKS.map((link) => (
+  const navItems = NAV_LINKS.map((link) => {
+    const isInicioLink = link.href === '#top';
+    const isActive = isInicioLink
+      ? activeSection === 'inicio'
+      : activeSection === link.href.substring(1);
+
+    return (
     <a
       key={link.label}
       href={link.href}
       className={cn(
         'text-sm font-semibold uppercase tracking-wider transition-colors hover:text-primary',
-        activeSection === link.href.substring(1)
-          ? 'text-primary'
-          : 'text-white'
+        isActive ? 'text-primary' : 'text-white'
       )}
     >
       {link.label}
     </a>
-  ));
+    );
+  });
 
   return (
     <header
@@ -78,7 +83,7 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
-        <Link href="#inicio" className="text-primary hover:text-primary/80 transition-colors">
+        <Link href="#top" className="text-primary hover:text-primary/80 transition-colors">
           <Logo className="h-16 w-auto text-white" />
         </Link>
         

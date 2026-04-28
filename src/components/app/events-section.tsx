@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+﻿import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SectionHeader } from './section-header';
@@ -10,6 +10,8 @@ type EventItem = {
   venue: string;
   city: string;
   poster?: string;
+  qr?: string;
+  qrLabel?: string;
   mapUrl?: string;
   note?: string;
   ticket?: {
@@ -21,10 +23,11 @@ type EventItem = {
 
 const upcomingEvents: EventItem[] = [
   {
-    date: 'Sáb 25 de abril de 2026',
+    date: 'Sáb 16 de mayo de 2026 · 18:00',
     venue: 'El Cuartel del Mar',
     city: 'Chiclana de la Frontera',
-    poster: '/eventos/el-cuartel-del-mar-2026-04-25/cartel_el_cuartel_del_mar_2026_04_25.jpg',
+    poster: '/eventos/el-cuartel-del-mar-2026-05-16/cartel_el_cuartel_del_mar_2026_05_16.jpg',
+    note: 'Reposición del concierto suspendido por lluvia.',
     mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
     ticket: { label: 'Próximamente', disabled: true },
   },
@@ -33,8 +36,10 @@ const upcomingEvents: EventItem[] = [
     venue: 'Sala La Quemá',
     city: 'Jerez de la Frontera',
     poster: '/eventos/sala-la-quema-2026-05-22/cartel_sala_la_quema_2026_05_22_temporal.jpeg',
+    qr: '/eventos/sala-la-quema-2026-05-22/qrcode-La_Quema_22052026_web.png',
+    qrLabel: 'Escanea para comprar entradas',
     mapUrl: 'https://maps.app.goo.gl/9b9ETLHayTi57Ctk6',
-    ticket: { label: 'Próximamente', disabled: true },
+    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-concierto-jerez-de-la-frontera?mpl=web' },
   },
   {
     date: 'Vie 3 de julio de 2026',
@@ -60,6 +65,14 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Sáb 25 de abril de 2026',
+    venue: 'El Cuartel del Mar (aplazado)',
+    city: 'Chiclana de la Frontera',
+    poster: '/eventos/el-cuartel-del-mar-2026-04-25/photo_2026-04-24_18-04-42.jpg',
+    note: 'Concierto suspendido por lluvia.',
+    mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
+  },
   {
     date: 'Dom 12 de abril de 2026',
     venue: 'Club de Suboficiales',
@@ -154,7 +167,7 @@ export function EventsSection() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="font-bold text-xl text-[#d6b25a]">{event.venue}</CardTitle>
+                    <CardTitle className="whitespace-nowrap font-bold text-lg md:text-xl leading-tight text-[#d6b25a]">{event.venue}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <div className="flex items-center text-white/70 mb-2">
@@ -177,6 +190,16 @@ export function EventsSection() {
                         )}
                         <p>{event.city}</p>
                     </div>
+                    {event.qr ? (
+                      <div className="mt-3 flex justify-center">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={withBasePath(event.qr)}
+                          alt={`QR de entradas para ${event.venue}`}
+                          className="h-auto w-24 border border-white/20 bg-white p-1"
+                        />
+                      </div>
+                    ) : null}
                     {event.note ? (
                       <p className="mt-3 text-sm text-white/70">{event.note}</p>
                     ) : null}
