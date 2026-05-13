@@ -29,7 +29,7 @@ const upcomingEvents: EventItem[] = [
     poster: '/eventos/el-cuartel-del-mar-2026-05-16/cartel_el_cuartel_del_mar_2026_05_16.jpg',
     note: 'Reposición del concierto suspendido por lluvia.',
     mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
-    ticket: { label: 'Próximamente', disabled: true },
+    ticket: { label: 'Entrada libre', disabled: true },
   },
   {
     date: 'Vie 22 de mayo de 2026 · 21:00',
