@@ -7,15 +7,19 @@ import { MultimediaSection } from "@/components/app/multimedia-section";
 import { ContactSection } from "@/components/app/contact-section";
 import { Footer } from "@/components/app/footer";
 
+const announcement = {
+  enabled: true,
+  text: "Jue 6 de agosto de 2026 - Asociación Aires de Cádiz - Cádiz.",
+  cta: {
+    label: "Comprar entradas",
+    href: "https://entradium.com/events/garrett-band-en-aires-2026",
+  },
+};
+
+const bandIntro =
+  "Garrett&Band es un proyecto musical evolucion de otro proyecto anterior de conciertos acusticos llamado The Live Again Sessions, llevados a cabo por Ed Garrett (nombre artistico del gaditano Eduardo Gallardo de Gomar), que consiste en una propuesta de musica alternativa a la escuchada habitualmente, al menos por nuestra zona, dentro del estilo acunado con el nombre de Americana Music o simplemente Americana, concepto que incluye y abarca todo el espectro de la musica americana de raices, especialmente de la surgida del sur de los EE.UU. que puede tomar y fusionar elementos de estilos tan diferentes como el Rock, el Blues, el Country en sus diferentes variaciones, el Bluegrass, el Gospel, o el Jazz entre otros con elementos o puntos de vista mas actuales o alternativos.";
+
 export default function Home() {
-  const announcement = {
-    enabled: true,
-    text: 'Sáb 16 de mayo de 2026 - El Cuartel del Mar - Chiclana de la Frontera.',
-    cta: {
-      label: 'Ver próximo concierto',
-      href: '#eventos',
-    },
-  };
   return (
     <div id="top" className="flex flex-col min-h-dvh bg-background">
       <Header />
@@ -27,6 +31,8 @@ export default function Home() {
             </p>
             <a
               href={announcement.cta.href}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center rounded-none bg-primary px-3 py-2 text-[10px] sm:px-4 sm:py-2 sm:text-xs font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90"
             >
               {announcement.cta.label}
@@ -39,7 +45,7 @@ export default function Home() {
         <section className="py-10 md:py-16 bg-background">
           <div className="container mx-auto max-w-4xl px-4">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
-              Garrett&Band, es un proyecto musical evolución de otro proyecto anterior de conciertos acústicos llamado The Live Again Sessions, llevados a cabo por Ed Garrett (nombre artístico del gaditano Eduardo Gallardo de Gomar), que consiste en una propuesta de música alternativa a la escuchada habitualmente, al menos por nuestra zona, dentro del estilo acuñado con el nombre de Americana Music o simplemente Americana, concepto que incluye y abarca todo el espectro de la música americana de raíces, especialmente de la surgida del sur de los EE.UU. que puede tomar y fusionar elementos de estilos tan diferentes como el Rock, el Blues, el Country en sus diferentes variaciones, el Bluegrass, el Gospel, o el Jazz entre otros con elementos o puntos de vista más actuales o "alternativos".
+              {bandIntro}
             </p>
           </div>
         </section>
@@ -53,4 +59,3 @@ export default function Home() {
     </div>
   );
 }
-

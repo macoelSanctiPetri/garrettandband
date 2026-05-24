@@ -23,25 +23,6 @@ type EventItem = {
 
 const upcomingEvents: EventItem[] = [
   {
-    date: 'Sáb 16 de mayo de 2026 · 18:00',
-    venue: 'El Cuartel del Mar',
-    city: 'Chiclana de la Frontera',
-    poster: '/eventos/el-cuartel-del-mar-2026-05-16/cartel_el_cuartel_del_mar_2026_05_16.jpg',
-    note: 'Reposición del concierto suspendido por lluvia.',
-    mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
-    ticket: { label: 'Entrada libre', disabled: true },
-  },
-  {
-    date: 'Vie 22 de mayo de 2026 · 21:00',
-    venue: 'Sala La Quemá',
-    city: 'Jerez de la Frontera',
-    poster: '/eventos/sala-la-quema-2026-05-22/cartel_sala_la_quema_2026_05_22_temporal.jpeg',
-    qr: '/eventos/sala-la-quema-2026-05-22/qrcode-La_Quema_22052026_web.png',
-    qrLabel: 'Escanea para comprar entradas',
-    mapUrl: 'https://maps.app.goo.gl/9b9ETLHayTi57Ctk6',
-    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-concierto-jerez-de-la-frontera?mpl=web' },
-  },
-  {
     date: 'Vie 3 de julio de 2026',
     venue: "Saint Patrick's Tavern",
     city: 'La Barrosa, Chiclana',
@@ -53,7 +34,7 @@ const upcomingEvents: EventItem[] = [
     venue: 'Asociacion Aires de Cadiz',
     city: 'Cadiz',
     mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
-    ticket: { label: 'Próximamente', disabled: true },
+    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-aires-2026' },
   },
   {
     date: 'Sáb 5 de septiembre de 2026',
@@ -65,6 +46,24 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Vie 22 de mayo de 2026 · 21:00',
+    venue: 'Sala La Quemá',
+    city: 'Jerez de la Frontera',
+    poster: '/eventos/sala-la-quema-2026-05-22/cartel_sala_la_quema_2026_05_22_temporal.jpeg',
+    qr: '/eventos/sala-la-quema-2026-05-22/qrcode-La_Quema_22052026_web.png',
+    qrLabel: 'Escanea para comprar entradas',
+    mapUrl: 'https://maps.app.goo.gl/9b9ETLHayTi57Ctk6',
+    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-concierto-jerez-de-la-frontera?mpl=web' },
+  },
+  {
+    date: 'Sáb 16 de mayo de 2026 · 18:00',
+    venue: 'El Cuartel del Mar',
+    city: 'Chiclana de la Frontera',
+    poster: '/eventos/el-cuartel-del-mar-2026-05-16/cartel_el_cuartel_del_mar_2026_05_16.jpg',
+    note: 'Reposición del concierto suspendido por lluvia.',
+    mapUrl: 'https://maps.app.goo.gl/D3dcGbDdPn3757hK8',
+  },
   {
     date: 'Sáb 25 de abril de 2026',
     venue: 'El Cuartel del Mar (aplazado)',
