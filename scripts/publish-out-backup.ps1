@@ -6,10 +6,10 @@ param(
 $ErrorActionPreference = "Stop"
 
 function Run-Git {
-  param([string[]]$Args)
-  & git @Args
+  param([string[]]$GitArgs)
+  & git @GitArgs
   if ($LASTEXITCODE -ne 0) {
-    throw "Git command failed: git $($Args -join ' ')"
+    throw "Git command failed: git $($GitArgs -join ' ')"
   }
 }
 
@@ -20,13 +20,13 @@ if (-not $currentBranch) {
 
 $branchExists = git show-ref --verify --quiet "refs/heads/$BranchName"
 if ($LASTEXITCODE -eq 0) {
-  Run-Git @("switch", $BranchName)
+  Run-Git -GitArgs @("switch", $BranchName)
 } else {
-  Run-Git @("switch", "-c", $BranchName)
+  Run-Git -GitArgs @("switch", "-c", $BranchName)
 }
 
 try {
-  Run-Git @("add", "-f", "out")
+  Run-Git -GitArgs @("add", "-f", "out")
 
   $stagedOutChanges = git diff --cached --name-only -- out
   if (-not $stagedOutChanges) {
@@ -34,9 +34,9 @@ try {
     exit 0
   }
 
-  Run-Git @("commit", "-m", $CommitMessage)
-  Run-Git @("push", "-u", "origin", $BranchName)
+  Run-Git -GitArgs @("commit", "-m", $CommitMessage)
+  Run-Git -GitArgs @("push", "-u", "origin", $BranchName)
 }
 finally {
-  Run-Git @("switch", $currentBranch)
+  Run-Git -GitArgs @("switch", $currentBranch)
 }
