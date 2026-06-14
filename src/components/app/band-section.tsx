@@ -83,16 +83,14 @@ const members = [
     bio:
       'Natural de San Fernando. Guitarrista solista y de sesión, blues y rock clásico, en diferentes formaciones en Cádiz. Ha participado en numerosos proyectos y actuado en escenarios como Got Talent España y Concert Music Festival (Chiclana) además de grabaciones de estudio para artistas emergentes.',
   },
+];
+
+const collaborators = [
   {
     name: 'Álvaro Bermúdez',
     instrument: 'Técnico de sonido',
     imageUrl: withBasePath('/fotos/Alvaro_Bermudez.png'),
-    bio:
-      "Natural de Tarragona. Estudios de clavecín en el Conservatorio de Música de la misma ciudad. Experiencia en MIDI, DAW y VST's usando FL Studio y Cubase, también en sonido digital y composiciones de música tracker. Ayudante de discomóviles en Castellón, DJ y técnico de sonido. Especialista en sintetizadores y teclados tipo arranger y workstation.",
   },
-];
-
-const collaborators = [
   {
     name: 'Gema Gallardo',
     instrument: 'Viola',
