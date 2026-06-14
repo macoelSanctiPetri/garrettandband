@@ -30,11 +30,18 @@ const upcomingEvents: EventItem[] = [
     ticket: { label: 'Entrada libre', disabled: true },
   },
   {
+    date: 'Jue 30 de julio de 2026',
+    venue: 'RMASD. La Cortadura',
+    city: 'Cádiz · C. la Línea de la Concepción, 14',
+    mapUrl: 'https://maps.app.goo.gl/PdNpYPuPVmTEkxku7',
+    ticket: { label: 'Próximamente', disabled: true },
+  },
+  {
     date: 'Jue 6 de agosto de 2026',
     venue: 'Asociacion Aires de Cadiz',
     city: 'Cadiz',
     mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
-    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-aires-2026' },
+    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-aires-2026?mpl=web' },
   },
   {
     date: 'Sáb 5 de septiembre de 2026',
@@ -42,6 +49,13 @@ const upcomingEvents: EventItem[] = [
     city: 'La Barrosa, Chiclana',
     mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
     ticket: { label: 'Entrada libre', disabled: true },
+  },
+  {
+    date: 'Sáb 14 de noviembre de 2026',
+    venue: 'I.E.S. Columela',
+    city: 'Cádiz · C/ Barcelona, 2',
+    mapUrl: 'https://maps.app.goo.gl/rUgcAFRR7nckhS6P7',
+    ticket: { label: 'Próximamente', disabled: true },
   },
 ];
 

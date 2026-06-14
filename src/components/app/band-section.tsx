@@ -103,6 +103,11 @@ const collaborators = [
     instrument: 'Violín',
     imageUrl: withBasePath('/fotos/colaboradores/Guillermo_Cordero.png'),
   },
+  {
+    name: 'Rayanna Townsend',
+    instrument: 'Vocalista',
+    imageUrl: withBasePath('/fotos/colaboradores/Rayanna_Townsend.jpeg'),
+  },
 ];
 
 const guests = [

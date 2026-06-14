@@ -12,7 +12,7 @@ const announcement = {
   text: "Jue 6 de agosto de 2026 - Asociación Aires de Cádiz - Cádiz.",
   cta: {
     label: "Comprar entradas",
-    href: "https://entradium.com/events/garrett-band-en-aires-2026",
+    href: "https://entradium.com/events/garrett-band-en-aires-2026?mpl=web",
   },
 };
 
