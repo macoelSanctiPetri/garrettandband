@@ -41,6 +41,7 @@ const upcomingEvents: EventItem[] = [
     date: 'Jue 6 de agosto de 2026',
     venue: 'Asociacion Aires de Cadiz',
     city: 'Cadiz',
+    poster: '/eventos/aires-de-cadiz-2026-08-06/Cartel_Aires_Cadiz_06082026_Web.jpg',
     mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
     ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-aires-2026?mpl=web' },
   },
