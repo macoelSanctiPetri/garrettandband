@@ -23,17 +23,10 @@ type EventItem = {
 
 const upcomingEvents: EventItem[] = [
   {
-    date: 'Vie 3 de julio de 2026',
-    venue: "Saint Patrick's Tavern",
-    city: 'La Barrosa, Chiclana',
-    poster: '/eventos/saint-patricks-tavern-2026-07-03/cartel_saint_patricks_tavern_2026_07_03.jpg',
-    mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
-    ticket: { label: 'Entrada libre', disabled: true },
-  },
-  {
-    date: 'Jue 30 de julio de 2026',
+    date: 'Jue 30 de julio de 2026 · 22:00',
     venue: 'RMASD. La Cortadura',
     city: 'Cádiz · C. la Línea de la Concepción, 14',
+    poster: '/eventos/cortadura-2026-07-30/cartel_cortadura_2026_07_30.jpg',
     mapUrl: 'https://maps.app.goo.gl/PdNpYPuPVmTEkxku7',
     ticket: { label: 'Próximamente', disabled: true },
   },
@@ -62,6 +55,13 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Vie 3 de julio de 2026',
+    venue: "Saint Patrick's Tavern",
+    city: 'La Barrosa, Chiclana',
+    poster: '/eventos/saint-patricks-tavern-2026-07-03/cartel_saint_patricks_tavern_2026_07_03.jpg',
+    mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
+  },
   {
     date: 'Vie 22 de mayo de 2026 · 21:00',
     venue: 'Sala La Quemá',

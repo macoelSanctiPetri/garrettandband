@@ -19,6 +19,7 @@ const members = [
     name: 'Eduardo Gallardo',
     instrument: 'Voz principal, guitarra acústica y bajo',
     imageUrl: withBasePath('/fotos/Eduardo_Gallardo.png'),
+    imageClassName: 'object-[center_22%]',
     bio:
       'Natural de Cádiz. Músico de formación clásica (piano, oboe y composición), amplia experiencia coral, director de coro (Coro de Cámara Nova Mvsica, 35 años), orquesta (JOFCA) y compositor. Vocalista principal de diferentes formaciones de jazz y de música americana en las que además era teclista o bajista. Fundador, compositor y líder de Garrett&Band.',
     links: [
@@ -151,7 +152,7 @@ export function BandSection() {
                       src={member.imageUrl}
                       alt={`Retrato de ${member.name}`}
                       fill
-                      className="object-cover"
+                      className={`object-cover ${member.imageClassName ?? ''}`}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
