@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Arrow & The Bow | Garrett&Band</title>
+    <meta
+      name="description"
+      content="Escucha The Arrow &amp; The Bow, el primer &aacute;lbum de Garrett&amp;Band, en tus plataformas favoritas."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#07111c" />
+    <meta property="og:title" content="The Arrow & The Bow | Garrett&Band" />
+    <meta
+      property="og:description"
+      content="Accede al &aacute;lbum completo de Garrett&amp;Band en Spotify, YouTube Music, Apple Music y Amazon Music."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./landing-bg.jpeg" />
+    <link rel="icon" href="./foto.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="./foto.jpg" />
+    <style>
+      :root {
+        --bg: #07111c;
+        --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+        --text: #f7f2e7;
+        --muted: rgba(247, 242, 231, 0.78);
+        --line: rgba(255, 255, 255, 0.14);
+        --glass: rgba(9, 15, 24, 0.68);
+        --glass-strong: rgba(9, 15, 24, 0.86);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at top, rgba(74, 115, 184, 0.16), transparent 28%),
+          linear-gradient(180deg, #0c1930 0%, #07111c 52%, #04080e 100%);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 12px;
+      }
+
+      .frame {
+        width: min(100%, 560px);
+      }
+
+      .artboard {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--panel-shadow);
+        background: #08111d;
+      }
+
+      .artboard img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(5, 10, 18, 0.08) 0%, rgba(5, 10, 18, 0.1) 44%, rgba(5, 10, 18, 0.58) 70%, rgba(5, 10, 18, 0.88) 100%);
+        pointer-events: none;
+      }
+
+      .links-zone {
+        position: absolute;
+        left: 50%;
+        bottom: 92px;
+        transform: translateX(-50%);
+        width: calc(100% - 34px);
+        max-width: 430px;
+        z-index: 1;
+      }
+
+      .links-panel {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        backdrop-filter: none;
+      }
+
+      .panel-copy {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .links {
+        display: grid;
+        gap: 10px;
+      }
+
+      .link-card {
+        display: grid;
+        grid-template-columns: 42px minmax(0, 1fr);
+        align-items: center;
+        gap: 14px;
+        min-height: 72px;
+        padding: 12px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 999px;
+        background: rgba(7, 17, 28, 0.18);
+        backdrop-filter: blur(4px);
+        color: inherit;
+        text-decoration: none;
+        text-align: left;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+
+      .link-card:hover,
+      .link-card:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(7, 17, 28, 0.3);
+        outline: none;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .label {
+        display: block;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+
+      .footer {
+        margin-top: 14px;
+        color: rgba(247, 242, 231, 0.6);
+        font-size: 0.84rem;
+        text-align: center;
+      }
+
+      .footer a {
+        color: rgba(247, 242, 231, 0.88);
+        text-decoration: none;
+      }
+
+      .footer a:hover,
+      .footer a:focus-visible {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 420px) {
+        body {
+          padding: 10px 8px;
+        }
+
+        .links-zone {
+          width: calc(100% - 20px);
+          bottom: 74px;
+        }
+
+        .links-panel {
+          padding: 10px;
+        }
+
+        .panel-copy {
+          font-size: 0.76rem;
+          margin-bottom: 10px;
+        }
+
+        .links {
+          gap: 8px;
+        }
+
+        .link-card {
+          grid-template-columns: 38px minmax(0, 1fr);
+          min-height: 64px;
+          gap: 12px;
+          padding: 10px 14px;
+        }
+
+        .label {
+          font-size: 0.72rem;
+          letter-spacing: 0.06em;
+        }
+
+        .icon {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      @media (min-width: 640px) {
+        .frame {
+          width: min(100%, 640px);
+        }
+
+        .links-zone {
+          max-width: 470px;
+          bottom: 104px;
+        }
+
+        .links-panel {
+          padding: 16px;
+        }
+
+        .link-card {
+          min-height: 74px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <section class="artboard" aria-label="Enlaces del álbum">
+        <img src="./landing-bg.jpeg" alt="Portada de The Arrow & The Bow de Garrett&Band" />
+        <div class="overlay"></div>
+
+        <div class="links-zone">
+          <div class="links-panel">
+            <p class="panel-copy">Escucha el álbum completo en tu plataforma favorita.</p>
+
+            <div class="links">
+              <a
+                class="link-card"
+                href="https://open.spotify.com/intl-es/album/2cc6iwW19fT8oIcqF7hVAy?si=s5V2RxiMSii-iXqmVgrKfg&utm_source=copy-link&nd=1&dlsi=754f872291424deb"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Escuchar The Arrow & The Bow en Spotify"
+              >
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="#1DB954" stroke-width="1.8"></circle>
+                  <path d="M7.5 10.2c3.6-1 7.1-.6 9.6 1" stroke="#1DB954" stroke-width="1.8" stroke-linecap="round"></path>
+                  <path d="M8.5 13.4c2.7-.7 5.4-.4 7.2.8" stroke="#1DB954" stroke-width="1.8" stroke-linecap="round"></path>
+                  <path d="M9.7 16.2c1.8-.4 3.6-.2 4.9.5" stroke="#1DB954" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+                <span class="label">Spotify</span>
+              </a>
+
+              <a
+                class="link-card"
+                href="https://music.youtube.com/playlist?list=OLAK5uy_knCdGYixWn-jZR5hOJuMf9JqseOppDZ4g"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Escuchar The Arrow & The Bow en YouTube Music"
+              >
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="#ff4d4d" stroke-width="1.8"></circle>
+                  <path d="M10 8.8l6 3.2-6 3.2V8.8z" fill="#ff4d4d"></path>
+                </svg>
+                <span class="label">YouTube Music</span>
+              </a>
+
+              <a
+                class="link-card"
+                href="https://music.apple.com/es/album/the-arrow-and-the-bow/6796615049"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Escuchar The Arrow & The Bow en Apple Music"
+              >
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15.9 12.3c0-1.9 1.5-2.8 1.6-2.8-.9-1.3-2.2-1.5-2.7-1.5-1.2-.1-2.2.7-2.8.7-.6 0-1.4-.7-2.3-.7-1.2 0-2.3.7-2.9 1.7-1.3 2.1-.3 5.2.9 6.9.6.8 1.2 1.8 2.2 1.7.9 0 1.3-.6 2.4-.6 1.1 0 1.4.6 2.5.6 1 0 1.7-.9 2.2-1.7.7-.9 1-1.8 1-1.9-.1 0-1.9-.7-1.9-2.4z" stroke="#f5f1e8" stroke-width="1.4" stroke-linejoin="round"></path>
+                  <path d="M14 6.8c.4-.5.7-1.2.6-1.8-.6 0-1.3.4-1.7.9-.4.5-.7 1.1-.6 1.8.7 0 1.3-.4 1.7-.9z" stroke="#f5f1e8" stroke-width="1.4" stroke-linejoin="round"></path>
+                </svg>
+                <span class="label">Apple Music</span>
+              </a>
+
+              <a
+                class="link-card"
+                href="https://music.amazon.es/albums/B0HCBC283H"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Escuchar The Arrow & The Bow en Amazon Music"
+              >
+                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7.8 15.8l2.1-7.2h2.3l2.1 7.2m-5.6-2h3.6" stroke="#ffb84d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M6.5 18.2c2.6 1.6 8.5 1.7 11.2 0" stroke="#ffb84d" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+                <span class="label">Amazon Music</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">
+        Sitio oficial de Garrett&amp;Band.
+        <a href="https://garrettandband.com/" target="_blank" rel="noreferrer">Visitar web</a>
+      </p>
+    </main>
+  </body>
+</html>
