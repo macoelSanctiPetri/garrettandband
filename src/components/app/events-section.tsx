@@ -23,14 +23,6 @@ type EventItem = {
 
 const upcomingEvents: EventItem[] = [
   {
-    date: 'Jue 30 de julio de 2026 · 22:00',
-    venue: 'RMASD. La Cortadura',
-    city: 'Cádiz · C. la Línea de la Concepción, 14',
-    poster: '/eventos/cortadura-2026-07-30/cartel_cortadura_2026_07_30.jpg',
-    mapUrl: 'https://maps.app.goo.gl/PdNpYPuPVmTEkxku7',
-    ticket: { label: 'Próximamente', disabled: true },
-  },
-  {
     date: 'Jue 6 de agosto de 2026',
     venue: 'Asociacion Aires de Cadiz',
     city: 'Cadiz',
@@ -55,6 +47,13 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Jue 30 de julio de 2026 · 22:00',
+    venue: 'RMASD. La Cortadura',
+    city: 'Cádiz · C. la Línea de la Concepción, 14',
+    poster: '/eventos/cortadura-2026-07-30/cartel_cortadura_2026_07_30.jpg',
+    mapUrl: 'https://maps.app.goo.gl/PdNpYPuPVmTEkxku7',
+  },
   {
     date: 'Vie 3 de julio de 2026',
     venue: "Saint Patrick's Tavern",
