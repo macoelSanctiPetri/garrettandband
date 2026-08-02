@@ -81,7 +81,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'What If',
     tag: 'Original',
-    pdf: '/album/what-if/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/what-if/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/0yXpoF3yECnLgnORCYCuY3?si=50e0011f75ee4916',
     youtube: 'https://music.youtube.com/watch?v=lxY4tL4qPD8&si=95alCanXl9oQ3jMs',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBTMNN6',
@@ -92,7 +92,7 @@ const fallbackSongs: SongItem[] = [
     title: 'The Arrow & The Bow',
     tag: 'Album',
     year: '2026',
-    pdf: '/album/the-arrow-and-the-bow/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/the-arrow-and-the-bow/letra.pdf',
     cover: '/album/the-arrow-and-the-bow/foto.jpg',
     spotify: 'https://open.spotify.com/intl-es/track/042eS3sOeIZ7KhUp1f9880?si=54d2929b9eb147c8',
     youtube: 'https://music.youtube.com/watch?v=gSRlZibehJg&si=Ey1lI5rwlmPn09do',
@@ -104,7 +104,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'West Virginia',
     tag: 'Original',
-    pdf: '/album/west-virginia/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/west-virginia/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/67lLqebKGvOEOvfdUYSkqg?si=6bbff08d510d49c6',
     youtube: 'https://music.youtube.com/watch?v=gzEyA9Er-_s&si=9fQKiryZQ-rLstz6',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBQPQ5Z',
@@ -115,7 +115,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: '4 Wheels',
     tag: 'Original',
-    pdf: '/album/4-wheels/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/4-wheels/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/6S5MeL19m2cYfTxetIHQiR?si=ebeac38d4c56421f',
     youtube: 'https://music.youtube.com/watch?v=1xX8__nXFhc&si=mITYvt1UEcRdpuoQ',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBVSD3Q',
@@ -125,7 +125,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'Precious Souls',
     tag: 'Original',
-    pdf: '/album/precious-souls/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/precious-souls/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/4kMljEFci461fBJ097MxMY?si=1b5647ff38a141d0',
     youtube: 'https://music.youtube.com/watch?v=GJRzIXEc5FM&si=HkKgWkczXTbpPEOB',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBTBJPL',
@@ -135,7 +135,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'Another Day',
     tag: 'Original',
-    pdf: '/album/another-day/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/another-day/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/3PIM0mkmyRiBrsOwUS61dW?si=fb13f05a933b4531',
     youtube: 'https://music.youtube.com/watch?v=ZI2E4Glt8WY&si=jhf1LvUwc4B3c3jG',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBQ3PZ6',
@@ -145,7 +145,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'Easy Love',
     tag: 'Original',
-    pdf: '/album/easy-love/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/easy-love/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/5MYhmvhroHwQeq8fFzgHsQ?si=62133da9f33c4d4b',
     youtube: 'https://music.youtube.com/watch?v=mk-19dNz7nE&si=l55mZuKUbmQsZ8Q9',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCBS76FV',
@@ -155,7 +155,7 @@ const fallbackSongs: SongItem[] = [
   {
     title: 'Will You?',
     tag: 'Original',
-    pdf: '/album/will-you/letra.pdf',
+    pdf: '/album/the-arrow-and-the-bow/will-you/letra.pdf',
     spotify: 'https://open.spotify.com/intl-es/track/5wk1zbj8yrklG73Py9Uk7O?si=673fa36e55ac4259',
     youtube: 'https://music.youtube.com/watch?v=yeuATAWiy_4&si=0HjK_UEn9Ro5Ml91',
     amazonMusic: 'https://music.amazon.es/tracks/B0HCC1HNW8',
@@ -273,7 +273,9 @@ export function SongsSection() {
               The Arrow &amp; The Bow
             </p>
             <h3 className="mt-5 text-4xl font-semibold uppercase tracking-[0.08em] md:text-6xl">
-              Quedan {days} {days === 1 ? 'día' : 'días'}
+              Quedan{' '}
+              <span className="text-5xl text-[#e2c06e] md:text-7xl">{days}</span>{' '}
+              {days === 1 ? 'día' : 'días'}
             </h3>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/75 md:text-xl">
               Nuestro primer álbum completo se publica el 5 de agosto de 2026. Muy pronto activaremos
