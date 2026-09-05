@@ -23,18 +23,27 @@ type EventItem = {
 
 const upcomingEvents: EventItem[] = [
   {
-    date: 'Jue 6 de agosto de 2026',
-    venue: 'Asociacion Aires de Cadiz',
-    city: 'Cadiz',
-    poster: '/eventos/aires-de-cadiz-2026-08-06/Cartel_Aires_Cadiz_06082026_Web.jpg',
-    mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
-    ticket: { label: 'Comprar entradas', href: 'https://entradium.com/events/garrett-band-en-aires-2026?mpl=web' },
+    date: 'Sáb 5 de septiembre de 2026 · 23:30',
+    venue: "Saint Patrick's Tavern",
+    city: 'Centro Comercial La Gaviota · La Barrosa, Chiclana',
+    poster: '/eventos/saint-patricks-tavern-2026-09-05/saintpatrick_0509.jpg',
+    mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
+    ticket: { label: 'Entrada libre', disabled: true },
   },
   {
-    date: 'Sáb 5 de septiembre de 2026',
-    venue: "Saint Patrick's Tavern",
-    city: 'La Barrosa, Chiclana',
-    mapUrl: 'https://maps.app.goo.gl/3iP1FYLj6nYXHQXQ8',
+    date: 'Dom 13 de septiembre de 2026 · 22:00',
+    venue: 'RMASD. La Cortadura',
+    city: 'Cádiz · C. la Línea de la Concepción, 14',
+    poster: '/eventos/cortadura-2026-09-13/cortadura_1309.jpg',
+    mapUrl: 'https://maps.app.goo.gl/PdNpYPuPVmTEkxku7',
+    ticket: { label: 'Entrada libre', disabled: true },
+  },
+  {
+    date: 'Sáb 24 de octubre de 2026 · 23:30',
+    venue: 'Hotel Utopía',
+    city: 'Benalup-Casas Viejas',
+    poster: '/eventos/hotel-utopia-2026-10-24/utopia_2410.jpg',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Hotel+Utopia+Benalup-Casas+Viejas',
     ticket: { label: 'Entrada libre', disabled: true },
   },
   {
@@ -47,6 +56,13 @@ const upcomingEvents: EventItem[] = [
 ];
 
 const pastEvents: EventItem[] = [
+  {
+    date: 'Jue 6 de agosto de 2026',
+    venue: 'Asociación Aires de Cádiz',
+    city: 'Cádiz',
+    poster: '/eventos/aires-de-cadiz-2026-08-06/Cartel_Aires_Cadiz_06082026_Web.jpg',
+    mapUrl: 'https://maps.app.goo.gl/go6xyhVTabiWmhMF6',
+  },
   {
     date: 'Jue 30 de julio de 2026 · 22:00',
     venue: 'RMASD. La Cortadura',

@@ -1,3 +1,111 @@
 {
-  "canciones": []
+  "album": {
+    "title": "The Arrow & The Bow",
+    "tag": "Album",
+    "year": "2026",
+    "cover": "/album/the-arrow-and-the-bow/foto.jpg",
+    "description": "Primer álbum completo de Garrett&Band, grabado con ocho canciones y un sonido más sólido, más cuidado y mejor producido.",
+    "platforms": [
+      {
+        "name": "Spotify",
+        "href": "https://open.spotify.com/intl-es/album/2cc6iwW19fT8oIcqF7hVAy?si=s5V2RxiMSii-iXqmVgrKfg&utm_source=copy-link&nd=1&dlsi=754f872291424deb"
+      },
+      {
+        "name": "YouTube",
+        "href": "https://music.youtube.com/playlist?list=OLAK5uy_knCdGYixWn-jZR5hOJuMf9JqseOppDZ4g"
+      },
+      {
+        "name": "Amazon Music",
+        "href": "https://music.amazon.es/albums/B0HCBC283H"
+      },
+      {
+        "name": "Apple Music",
+        "href": "https://music.apple.com/es/album/the-arrow-and-the-bow/6796615049"
+      }
+    ]
+  },
+  "canciones": [
+    {
+      "title": "What If",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/what-if/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/0yXpoF3yECnLgnORCYCuY3?si=50e0011f75ee4916",
+      "youtube": "https://music.youtube.com/watch?v=lxY4tL4qPD8&si=95alCanXl9oQ3jMs",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBTMNN6",
+      "appleMusic": "https://music.apple.com/es/song/what-if/6796615050",
+      "description": "Tema que abre el álbum, ya disponible con letra en inglés y español."
+    },
+    {
+      "title": "The Arrow & The Bow",
+      "tag": "Album",
+      "year": "2026",
+      "pdf": "/album/the-arrow-and-the-bow/the-arrow-and-the-bow/letra.pdf",
+      "cover": "/album/the-arrow-and-the-bow/foto.jpg",
+      "spotify": "https://open.spotify.com/intl-es/track/042eS3sOeIZ7KhUp1f9880?si=54d2929b9eb147c8",
+      "youtube": "https://music.youtube.com/watch?v=gSRlZibehJg&si=Ey1lI5rwlmPn09do",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBX4TMR",
+      "appleMusic": "https://music.apple.com/es/song/the-arrow-and-the-bow/6796615052",
+      "description": "Tema que da nombre al primer álbum completo de Garrett&Band, ahora grabado junto al resto del repertorio con un sonido más sólido y mejor producido."
+    },
+    {
+      "title": "West Virginia",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/west-virginia/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/67lLqebKGvOEOvfdUYSkqg?si=6bbff08d510d49c6",
+      "youtube": "https://music.youtube.com/watch?v=gzEyA9Er-_s&si=9fQKiryZQ-rLstz6",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBQPQ5Z",
+      "appleMusic": "https://music.apple.com/es/song/west-virginia/6796615053",
+      "description": "Paisaje americano, narrativa de viaje y una atmósfera clásica llevada al repertorio de la banda."
+    },
+    {
+      "title": "4 Wheels",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/4-wheels/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/6S5MeL19m2cYfTxetIHQiR?si=ebeac38d4c56421f",
+      "youtube": "https://music.youtube.com/watch?v=1xX8__nXFhc&si=mITYvt1UEcRdpuoQ",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBVSD3Q",
+      "appleMusic": "https://music.apple.com/es/song/4-wheels/6796615061",
+      "description": "Canción de carretera y movimiento, pensada para sonar abierta y con nervio en directo."
+    },
+    {
+      "title": "Precious Souls",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/precious-souls/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/4kMljEFci461fBJ097MxMY?si=1b5647ff38a141d0",
+      "youtube": "https://music.youtube.com/watch?v=GJRzIXEc5FM&si=HkKgWkczXTbpPEOB",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBTBJPL",
+      "appleMusic": "https://music.apple.com/es/song/precious-souls/6796615062",
+      "description": "Un corte más emocional, con un tono cálido y centrado en la interpretación."
+    },
+    {
+      "title": "Another Day",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/another-day/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/3PIM0mkmyRiBrsOwUS61dW?si=fb13f05a933b4531",
+      "youtube": "https://music.youtube.com/watch?v=ZI2E4Glt8WY&si=jhf1LvUwc4B3c3jG",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBQ3PZ6",
+      "appleMusic": "https://music.apple.com/es/song/another-day/6796615063",
+      "description": "Tema propio con un pulso más intimista y un enfoque directo en la letra."
+    },
+    {
+      "title": "Easy Love",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/easy-love/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/5MYhmvhroHwQeq8fFzgHsQ?si=62133da9f33c4d4b",
+      "youtube": "https://music.youtube.com/watch?v=mk-19dNz7nE&si=l55mZuKUbmQsZ8Q9",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCBS76FV",
+      "appleMusic": "https://music.apple.com/es/song/easy-love/6796615064",
+      "description": "Tema ligero y melódico, con un acabado más inmediato y pegadizo."
+    },
+    {
+      "title": "Will You?",
+      "tag": "Original",
+      "pdf": "/album/the-arrow-and-the-bow/will-you/letra.pdf",
+      "spotify": "https://open.spotify.com/intl-es/track/5wk1zbj8yrklG73Py9Uk7O?si=673fa36e55ac4259",
+      "youtube": "https://music.youtube.com/watch?v=yeuATAWiy_4&si=0HjK_UEn9Ro5Ml91",
+      "amazonMusic": "https://music.amazon.es/tracks/B0HCC1HNW8",
+      "appleMusic": "https://music.apple.com/es/song/will-you/6796615065",
+      "description": "Cierre del álbum, ya disponible con letra en inglés y español."
+    }
+  ]
 }

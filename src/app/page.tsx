@@ -7,15 +7,6 @@ import { MultimediaSection } from "@/components/app/multimedia-section";
 import { ContactSection } from "@/components/app/contact-section";
 import { Footer } from "@/components/app/footer";
 
-const announcement = {
-  enabled: true,
-  text: "Jue 6 de agosto de 2026 - Presentación de nuestro primer disco en Asociación Aires de Cádiz - Cádiz.",
-  cta: {
-    label: "Comprar entradas",
-    href: "https://entradium.com/events/garrett-band-en-aires-2026?mpl=web",
-  },
-};
-
 const bandIntro =
   "Garrett&Band es un proyecto musical evolucion de otro proyecto anterior de conciertos acusticos llamado The Live Again Sessions, llevados a cabo por Ed Garrett (nombre artistico del gaditano Eduardo Gallardo de Gomar), que consiste en una propuesta de musica alternativa a la escuchada habitualmente, al menos por nuestra zona, dentro del estilo acunado con el nombre de Americana Music o simplemente Americana, concepto que incluye y abarca todo el espectro de la musica americana de raices, especialmente de la surgida del sur de los EE.UU. que puede tomar y fusionar elementos de estilos tan diferentes como el Rock, el Blues, el Country en sus diferentes variaciones, el Bluegrass, el Gospel, o el Jazz entre otros con elementos o puntos de vista mas actuales o alternativos.";
 
@@ -23,23 +14,19 @@ export default function Home() {
   return (
     <div id="top" className="flex flex-col min-h-dvh bg-background">
       <Header />
-      {announcement.enabled ? (
-        <div className="bg-[#0a0a0a] px-4 py-2 sm:px-6 sm:py-3 shadow-lg">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 text-left sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-xs sm:text-base font-medium text-amber-300">
-              {announcement.text}
-            </p>
-            <a
-              href={announcement.cta.href}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-none bg-primary px-3 py-2 text-[10px] sm:px-4 sm:py-2 sm:text-xs font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90"
-            >
-              {announcement.cta.label}
-            </a>
-          </div>
+      <div className="bg-[#0a0a0a] px-4 py-2 shadow-lg sm:px-6 sm:py-3">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 text-left sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs font-medium text-amber-300 sm:text-base">
+            HOY · 23:30 h · Garrett &amp; Band en Saint Patrick&apos;s Tavern · La Barrosa, Chiclana
+          </p>
+          <a
+            href="#eventos"
+            className="inline-flex items-center justify-center rounded-none bg-primary px-3 py-2 text-[10px] font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90 sm:px-4 sm:py-2 sm:text-xs"
+          >
+            Entrada libre
+          </a>
         </div>
-      ) : null}
+      </div>
       <main>
         <HeroSection />
         <section className="py-10 md:py-16 bg-background">
